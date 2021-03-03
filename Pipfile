@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+yacs = "*"
+opencv-python = "*"
+scipy = "*"
+numba = "*"
+progress = "*"
+motmetrics = "*"
+matplotlib = "*"
+lap = "*"
+openpyxl = "*"
+Cython = "*"
+Pillow = "*"
+tensorboardX = "*"
+cython-bbox = "*"
+
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

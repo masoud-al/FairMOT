@@ -37,13 +37,12 @@ There has been remarkable progress on object detection and re-identification in 
 
 ## Installation
 * Clone this repo, and we'll call the directory that you cloned as ${FAIRMOT_ROOT}
-* Install dependencies. We use python 3.7 and pytorch >= 1.2.0
+* Make sure you have `pyenv` and `pipenv` packages installed.
 ```
-conda create -n FairMOT
-conda activate FairMOT
-conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
+pipenv install
+pipenv shell
+pip install torch==1.2.0+cpu torchvision==0.4.0+cpu  -f https://download.pytorch.org/whl/torch_stable.html
 cd ${FAIRMOT_ROOT}
-pip install -r requirements.txt
 ```
 * We use [DCNv2](https://github.com/CharlesShang/DCNv2) in our backbone network and more details can be found in their repo. 
 ```
