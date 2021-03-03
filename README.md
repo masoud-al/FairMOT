@@ -39,10 +39,10 @@ There has been remarkable progress on object detection and re-identification in 
 * Clone this repo, and we'll call the directory that you cloned as ${FAIRMOT_ROOT}
 * Make sure you have `pyenv` and `pipenv` packages installed.
 ```
+cd ${FAIRMOT_ROOT}
 pipenv install
 pipenv shell
 pip install torch==1.2.0+cpu torchvision==0.4.0+cpu  -f https://download.pytorch.org/whl/torch_stable.html
-cd ${FAIRMOT_ROOT}
 ```
 * We use [DCNv2](https://github.com/CharlesShang/DCNv2) in our backbone network and more details can be found in their repo. 
 ```
@@ -198,7 +198,7 @@ Results of the test set all need to be evaluated on the MOT challenge server. Yo
 You can input a raw video and get the demo video by running src/demo.py and get the mp4 format of the demo video:
 ```
 cd src
-python demo.py mot --load_model ../models/fairmot_dla34.pth --conf_thres 0.4
+python demo.py mot --load_model ../models/fairmot_dla34.pth --conf_thres 0.4 --gpus -1
 ```
 You can change --input-video and --output-root to get the demos of your own videos.
 --conf_thres can be set from 0.3 to 0.7 depending on your own videos.
